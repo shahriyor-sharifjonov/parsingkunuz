@@ -16,7 +16,7 @@ for el in html.select("#news-list .news"):
     pub_date = el.select_one(".news-meta > span").get_text(strip=True)
     img_link = img["src"]
     json_data.append({
-        "title": title.replace(' ', ''),
+        "title": title,
         "pub_date": pub_date
     })
     with open(f"images/img_{post_id}.png", mode="wb") as f:
